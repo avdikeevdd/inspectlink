@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Открыть в Steam</title>
+    <script>
+      const url = new URL(window.location.href);
+      const steamLink = url.searchParams.get('url');
+      if (steamLink) {
+        window.location.href = steamLink;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Открыть в Steam</h2>
+    <p>Если не сработало, нажмите:</p>
+    <a id="steam-link" href="#">Открыть вручную</a>
+    <script>
+      const url = new URL(window.location.href);
+      const steamLink = url.searchParams.get('url');
+      if (steamLink) {
+        document.getElementById('steam-link').href = steamLink;
+      }
+    </script>
+  </body>
+</html>
